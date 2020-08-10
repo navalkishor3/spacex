@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "spaceX": {
+    "spacex": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/spaceX/browser",
+            "outputPath": "dist/spacex/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "spaceX:build"
+            "browserTarget": "spacex:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "spaceX:build:production"
+              "browserTarget": "spacex:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "spaceX:build"
+            "browserTarget": "spacex:build"
           }
         },
         "test": {
@@ -114,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "spaceX:serve"
+            "devServerTarget": "spacex:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "spaceX:serve:production"
+              "devServerTarget": "spacex:serve:production"
             }
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/spaceX/server",
+            "outputPath": "dist/spacex/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
@@ -146,21 +146,21 @@
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
-            "browserTarget": "spaceX:build",
-            "serverTarget": "spaceX:server"
+            "browserTarget": "spacex:build",
+            "serverTarget": "spacex:server"
           },
           "configurations": {
             "production": {
-              "browserTarget": "spaceX:build:production",
-              "serverTarget": "spaceX:server:production"
+              "browserTarget": "spacex:build:production",
+              "serverTarget": "spacex:server:production"
             }
           }
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "browserTarget": "spaceX:build:production",
-            "serverTarget": "spaceX:server:production",
+            "browserTarget": "spacex:build:production",
+            "serverTarget": "spacex:server:production",
             "routes": [
               "/"
             ]
@@ -172,5 +172,5 @@
       }
     }
   },
-  "defaultProject": "spaceX"
+  "defaultProject": "spacex"
 }
