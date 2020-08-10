@@ -1,18 +1,19 @@
 # SpaceX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4, Bootstrap 4 & HTML 5.
+It is responsive to  all mobiles to desktop device with SEO.
 
 ## npm install
 
 Take checkout of code &  Run `npm install`.
 
-## Server Side Render Landing Page( Dev testing )
-
-Run `npm run dev:ssr`. Navigate to `http://localhost:4200/`.
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Development server Universal
+
+Run `npm run serve:ssr` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -21,6 +22,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Build Universal
+
+Run `npm run build:ssr` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
