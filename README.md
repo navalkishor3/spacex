@@ -6,9 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Take checkout of code &  Run `npm install`.
 
-## Server Side Render Landing Page
+## Server Side Render Landing Page( Dev testing )
 
-Run `npm run dev:ssr`. Navigate to `http://localhost:4201/`.
+Run `npm run dev:ssr`. Navigate to `http://localhost:4200/`.
 
 ## Development server
 
