@@ -13,6 +13,10 @@
     "build:ssr": "ng build --prod && ng run spaceX:server:production",
     "prerender": "ng run spaceX:prerender"
   },
+   "engines": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.4",
@@ -39,8 +43,8 @@
     "typescript": "~3.8.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.4",    
-    "@angular/language-service": "~9.1.4", 
+    "@angular-devkit/build-angular": "~0.901.4",
+    "@angular/language-service": "~9.1.4",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "codelyzer": "^5.1.2",
@@ -53,6 +57,6 @@
     "karma-jasmine-html-reporter": "^1.4.2",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
-    "tslint": "~6.1.0"    
+    "tslint": "~6.1.0"
   }
 }
