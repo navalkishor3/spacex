@@ -1,0 +1,48 @@
+<ul class="list-group">
+    <li class="list-group-item">
+        <h5 class="d-flex justify-content-between align-items-center">
+            <span class="">Filters</span>
+        </h5>
+        <div class="mb-4">
+            <h6 class="my-0 text-center text-muted bottomUnderline mb-2">Launch Year</h6>
+            <ul class="row">
+                <li class="col-6 col-sm-6 col-md-6 yearBlock" *ngFor="let year of launchesYears">
+                    <button type="button" class="btn btn-sm  btn-filter-bg mt-2"
+                        [ngClass]="{'active': isLaunchYear === year}"
+                        (click)="getLaunches({'launch_year': year, 'launch_year_enable': true})">{{year}}</button>
+                </li>
+            </ul>
+
+        </div>
+        <div class="mb-4">
+            <h6 class="my-0 text-center text-muted bottomUnderline mb-3">Successful Launch</h6>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6">
+                    <button type="button" class="btn btn-sm  btn-filter-bg"
+                        [ngClass]="{'active': isSuccessfulLaunch === 'launchSuccessTrue'}"
+                        (click)="getLaunches({'launch_success': true, 'launch_success_enable': true})">True</button>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6">
+                    <button type="button" class="btn btn-sm  btn-filter-bg "
+                        [ngClass]="{'active': isSuccessfulLaunch === 'launchSuccessFalse'}"
+                        (click)="getLaunches({'launch_success': false, 'launch_success_enable': true})">False</button>
+                </div>
+            </div>
+        </div>
+        <div class="mb-4">
+            <h6 class="my-0 text-center text-mute bottomUnderline mb-3">Successful Landing</h6>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6">
+                     <button type="button" class="btn btn-sm  btn-filter-bg"
+                [ngClass]="{'active': isSuccessfulLand === 'landSuccessTrue'}"
+                (click)="getLaunches({'land_success_enable': true, 'land_success': true})">True</button>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6">
+                    <button type="button" class="btn btn-sm  btn-filter-bg"
+                    [ngClass]="{'active': isSuccessfulLand === 'landSuccessFalse'}"
+                    (click)="getLaunches({'land_success_enable': true, 'land_success': false})">False</button>
+                </div>
+            </div>            
+        </div>
+    </li>
+</ul>

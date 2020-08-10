@@ -1,0 +1,27 @@
+.btn-filter-bg {
+    background-color: #c5e09b;
+
+    &.active {
+        background-color: #7cba01;
+    }
+
+    &:focus {
+        border-color: #c5e09b;
+        box-shadow: none;
+    }
+}
+.bottomUnderline {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    .yearBlock {
+        display: inline-block;
+    }
+}
+.btn {
+    width: 100%;
+}
