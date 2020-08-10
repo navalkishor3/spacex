@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## npm install
 
-Take checkout of code &  Run `ng install`.
+Take checkout of code &  Run `npm install`.
 
 ## Server Side Render Landing Page
 
