@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 699px,
+  md: 700px,
+  lg: 1024px,
+  xl: 1440px
+);
+
+
+$container-max-widths: (
+  sm: 700px,
+  md: 1024px,
+  lg: 1440px
+);
+
+@import "~bootstrap/scss/bootstrap";
