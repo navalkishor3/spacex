@@ -13,21 +13,23 @@ export class DashboardComponent implements OnInit {
   constructor(private title: Title, private meta: Meta) { }
 
   ngOnInit(): void {
-  this.setSEO();
+    this.setTitle();
+    this.setSEO();
   }
   
-  setSEO(){
+  setTitle(){
     this.title.setTitle(this.homeTitle);
+  }
+
+  setSEO() {    
     this.meta.addTags([
-      {name: 'keywords', content: 'This is spacex project with Server Side Render via Angular Universal'},
-      {name: 'description', content: 'This is spacex project with Server Side Render via Angular Universal'},
-      {name: 'robots', content: 'index, spacex'}
+      { name: 'keywords', content: 'This is spacex project with Server Side Render via Angular Universal' },
+      { name: 'description', content: 'This is spacex project with Server Side Render via Angular Universal' },
+      { name: 'robots', content: 'index, spacex' }
     ]);
   }
 
   onLaunchesChange(data) {
     this.launches = data;
   }
-
-
 }
