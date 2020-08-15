@@ -1,27 +1,27 @@
-pipeline { 
+pipeline {
         agent any
         stages
     {
-            stage('Build')
+        stage('Lint')
         {
                     steps {
-                        echo 'Building the Code..........'
-                        bat 'npm install'
-                        bat 'npm run build:ssr'
-                    }
-        }
-                stage('Test')
-        {
-                    steps {
-                        echo 'Testing the Code..........'
-                        bat 'ng test'
-                    }
-        }
-                stage('Lint')
-        {
-                    steps {
-                        echo 'Linting the Project..........'
+                        echo 'Linting starts..........'
                         bat 'ng lint'
+                        echo 'Linting ends..........'
+                    }
+        }  stage('Test')
+        {
+                    steps {
+                        echo 'Testing starts..........'
+                        bat 'npm test-prod'
+                        echo 'Testing ends..........'
+                    }
+        }   stage('Build')
+        {
+                    steps {
+                        echo 'Building the Code starts..........'
+                        bat 'npm run build:ssr'
+                        echo 'Building the code ends..........'
                     }
         }
     }

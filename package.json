@@ -6,6 +6,7 @@
     "start": "node dist/spacex/server/main.js",
     "build": "npm run build:ssr",
     "test": "ng test",
+    "test-prod": "ng test --watch=false  --codeCoverage=true  --browsers=ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run spacex:serve-ssr",
