@@ -14,7 +14,7 @@ pipeline {
         {
                     steps {
                         echo 'Testing starts..........'
-                        bat 'npm test-prod'
+                        bat 'npm run test-prod'
                         echo 'Testing ends..........'
                     }
         }
