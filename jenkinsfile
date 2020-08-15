@@ -6,6 +6,7 @@ pipeline {
         {
                     steps {
                         echo 'Building the Code..........'
+                        bat 'npm install'
                         bat 'npm run build:ssr'
                     }
         }
