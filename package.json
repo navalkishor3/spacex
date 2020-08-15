@@ -8,6 +8,7 @@
     "test": "ng test",
     "test-prod": "ng test --watch=false  --codeCoverage=true  --browsers=ChromeHeadless",
     "lint": "ng lint",
+    "lint-fix": "ng lint --fix",
     "e2e": "ng e2e",
     "dev:ssr": "ng run spacex:serve-ssr",
     "serve:ssr": "node dist/spacex/server/main.js",

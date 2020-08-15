@@ -16,12 +16,12 @@ export class DashboardComponent implements OnInit {
     this.setTitle();
     this.setSEO();
   }
-  
+
   setTitle(){
     this.title.setTitle(this.homeTitle);
   }
 
-  setSEO() {    
+  setSEO() {
     this.meta.addTags([
       { name: 'keywords', content: 'This is spacex project with Server Side Render via Angular Universal' },
       { name: 'description', content: 'This is spacex project with Server Side Render via Angular Universal' },
