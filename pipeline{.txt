@@ -1,0 +1,28 @@
+pipeline{
+agent any
+stages 
+{
+stage('Build') 
+{
+steps{
+echo "Building the Code.........."
+bat "npm run build:ssr"
+}
+}
+stage('Test') 
+{
+steps{
+echo "Testing the Code.........."
+bat "ng test"
+}
+}
+stage('Lint') 
+{
+steps{
+echo "Linting the Project.........."
+bat "ng lint"
+}
+}
+
+}
+}
