@@ -9,14 +9,16 @@ pipeline {
                         bat 'ng lint'
                         echo 'Linting ends..........'
                     }
-        }  stage('Test')
+        }
+        stage('Test')
         {
                     steps {
                         echo 'Testing starts..........'
                         bat 'npm test-prod'
                         echo 'Testing ends..........'
                     }
-        }   stage('Build')
+        }
+        stage('Build')
         {
                     steps {
                         echo 'Building the Code starts..........'
