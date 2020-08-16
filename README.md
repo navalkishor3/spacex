@@ -37,7 +37,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Travis CI
 
-For CI & CD , I used Travis CI. Whenever there is push in git Travis CI will test code and pass/fail code build. For more refer .travis.yml.
+For linting, test case & code build quality I am using Travis CI. Whenever there is push in git Travis CI will test code and pass/fail code build. For more refer .travis.yml.
+url to track build https://travis-ci.org/github/navalrawat/spacex
 
 ## Further help
 
