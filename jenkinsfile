@@ -5,6 +5,7 @@ pipeline {
         stage('Lint')
         {
                     steps {
+                        bat 'git push heroku master'
                         echo 'Linting starts..........'
                         bat 'ng lint'
                         echo 'Linting ends..........'
