@@ -5,6 +5,7 @@ pipeline {
         stage('Lint')
         {
                     steps {
+                        bat 'git.exe push https://git.heroku.com/spacex-sapient.git HEAD:master -f'
                         echo 'Linting starts..........'
                         bat 'ng lint'
                         echo 'Linting ends..........'
