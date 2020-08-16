@@ -33,7 +33,7 @@ export class LaunchFilterComponent implements OnInit {
 
   ngOnInit(): void {
     this.getLaunches({ all: true, launch_year_enable: false, launch_success_enable: false, land_success_enable: false });
-    console.log(13);
+    console.log(14);
   }
 
   getLaunches(filterObject) {
