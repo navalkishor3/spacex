@@ -7,7 +7,7 @@ pipeline {
                     steps {
                        
                         bat 'heroku git:remote -a spacex-sapient'
-                        bat 'git remote add heroku git@heroku.com:spacex-sapient.git'
+                        bat 'git push heroku master'
                         echo 'Linting starts..........'
                         bat 'ng lint'
                         echo 'Linting ends..........'
