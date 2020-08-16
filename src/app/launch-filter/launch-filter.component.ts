@@ -39,7 +39,7 @@ export class LaunchFilterComponent implements OnInit {
   getLaunches(filterObject) {
 
     Object.assign(this.filterData, {
-      "all": false,
+      all: false,
       launch_success_enable: filterObject.launch_success_enable || this.filterData.launch_success_enable,
       land_success_enable: filterObject.land_success_enable || this.filterData.land_success_enable,
       launch_year_enable: filterObject.launch_year_enable || this.filterData.launch_year_enable,
