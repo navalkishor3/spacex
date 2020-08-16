@@ -4,10 +4,9 @@ pipeline {
     {
         stage('Lint')
         {
-                    steps {
-                       
+                    steps {                      
                         bat 'heroku git:remote -a spacex-sapient'
-                        bat 'git push heroku master'
+                        bat 'git push master'
                         echo 'Linting starts..........'
                         bat 'ng lint'
                         echo 'Linting ends..........'
