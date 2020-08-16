@@ -30,7 +30,7 @@ pipeline {
         {
                     steps {
                         echo 'Deploy Code starts..........'
-                        bat 'git.exe push https://git.heroku.com/spacex-sapient.git HEAD:master -f'
+                        bat 'git push https://git.heroku.com/spacex-sapient.git HEAD:master -f'
                         echo 'Deploy code ends..........'
                     }
         }
