@@ -4,8 +4,7 @@ pipeline {
     {
         stage('Lint')
         {
-                    steps {
-                        bat 'git.exe push https://git.heroku.com/spacex-sapient.git HEAD:master -f'
+                    steps {                      
                         echo 'Linting starts..........'
                         bat 'ng lint'
                         echo 'Linting ends..........'
@@ -22,9 +21,17 @@ pipeline {
         stage('Build')
         {
                     steps {
-                        echo 'Building the Code starts..........'
+                        echo 'Building the code starts..........'
                         bat 'npm run build:ssr'
                         echo 'Building the code ends..........'
+                    }
+        }
+         stage('Deploy')
+        {
+                    steps {
+                        echo 'Deploy Code starts..........'
+                        bat 'git.exe push https://git.heroku.com/spacex-sapient.git HEAD:master -f'
+                        echo 'Deploy code ends..........'
                     }
         }
     }
