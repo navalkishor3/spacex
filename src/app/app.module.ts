@@ -8,6 +8,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FooterComponent } from './footer/footer.component';
 import { LaunchFilterComponent } from './launch-filter/launch-filter.component';
 import { HeaderComponent } from './header/header.component';
+import { LaunchViewComponent } from './launch-view/launch-view.component';
+
+import { NgxLoadingModule } from 'ngx-loading';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,14 @@ import { HeaderComponent } from './header/header.component';
     DashboardComponent,
     FooterComponent,
     LaunchFilterComponent,
-    HeaderComponent
+    HeaderComponent,
+    LaunchViewComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxLoadingModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

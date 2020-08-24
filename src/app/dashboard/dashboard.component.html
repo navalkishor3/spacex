@@ -1,31 +1,19 @@
-<div class="container">
-    <app-header></app-header>
-    <div class="row">
-        <div class="col-sm-12 col-md-4">
-            <app-launch-filter (launchesChange)="onLaunchesChange($event)"></app-launch-filter>
-        </div>
-        <div class="col-sm-12 col-md-8">
-            <div class="row">
-                <div class=" col-sm-12 col-md-6 col-lg-3 custom-card" *ngFor="let launch of launches">
-                    <div class="card-body box-shadow">
-                        <ul class="list-unstyled">
-                            <li class="text-center imgCotainer mb-2"><img [src]="launch.links.flickr_images[0] || 'assets/images/no-image.jpg'" width="100px" height="120"
-                                    [alt]="launch.mission_name" [title]="launch.mission_name" /></li>
-                            <li class="mb-2"><a href="#" class="bold">{{launch.mission_name}} #{{launch.flight_number}}</a></li>
-                            <li><span class="bold">Mission Ids:</span>
-                                <ul *ngFor="let id of launch.mission_id">
-                                    <li>{{id}}</li>
-                                </ul>
-                            </li>
-                            <li><span class="bold">Launch Year:</span> {{launch.launch_year}}</li>
-                            <li><span class="bold">Successful Launch:</span> {{launch.launch_success}}</li>
-                            <li><span class="bold">Successful Landing:</span>
-                                {{launch.rocket.first_stage.cores[0].land_success}}</li>
-                        </ul>
+<div class="container">   
+        <app-header></app-header>
+        <div class="row">
+            <div class="col-sm-12 col-md-4">
+                <app-launch-filter (loading)="onLoading($event)" (launchesChange)="onLaunchesChange($event)"></app-launch-filter>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <div class="row">
+                    <div class=" col-sm-12 col-md-6 col-lg-3 custom-card" *ngFor="let launch of launches">
+                        <app-launch-view [launch]="launch" *ngIf="launch"></app-launch-view>                        
                     </div>
                 </div>
+                <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" >
+                </ngx-loading>
             </div>
         </div>
-    </div>
-    <app-footer></app-footer>
+        <app-footer></app-footer>  
+  
 </div>

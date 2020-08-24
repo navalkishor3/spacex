@@ -10,12 +10,14 @@ import { Location } from '@angular/common';
 })
 export class LaunchFilterComponent implements OnInit {
   @Output() launchesChange = new EventEmitter();
+  @Output() loading = new EventEmitter() ;
 
   public launchesYears = ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'];
   public isLaunchYear; // show button active
   public isSuccessfulLaunch; // show button active
   public isSuccessfulLand; // show button active
   public launches;
+
 
   public filterData = {
     launch_year_enable : '',
@@ -33,11 +35,10 @@ export class LaunchFilterComponent implements OnInit {
 
   ngOnInit(): void {
     this.getLaunches({ all: true, launch_year_enable: false, launch_success_enable: false, land_success_enable: false });
-    console.log(23);
   }
 
   getLaunches(filterObject) {
-
+    this.loading.emit(true);
     Object.assign(this.filterData, {
       all: false,
       launch_success_enable: filterObject.launch_success_enable || this.filterData.launch_success_enable,
@@ -51,6 +52,9 @@ export class LaunchFilterComponent implements OnInit {
       .subscribe((data) => {
         this.launches = data;
         this.launchesChange.emit(this.launches);
+        this.loading.emit(false);
+      }, error => {
+        this.loading.emit(false);
       });
 
     const urlParam = { limit: 100 };

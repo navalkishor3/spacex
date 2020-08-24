@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
+import { Launch } from './launch.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +8,8 @@ import { Title, Meta } from '@angular/platform-browser';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  public launches;
+  public launches: Launch[];
+  public loading = false;
   public homeTitle = 'SpaceX Universal';
 
   constructor(private title: Title, private meta: Meta) { }
@@ -31,5 +33,9 @@ export class DashboardComponent implements OnInit {
 
   onLaunchesChange(data) {
     this.launches = data;
+  }
+
+  onLoading(data){
+    this.loading = data;
   }
 }

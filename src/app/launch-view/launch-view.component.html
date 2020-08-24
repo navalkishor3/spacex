@@ -1,0 +1,19 @@
+<div class="card-body box-shadow">
+    <ul class="list-unstyled">
+        <li class="text-center imgCotainer mb-2"><img
+                [src]="launch && launch.links.flickr_images[0] || 'assets/images/no-image.jpg'"
+                width="100px" height="120" [alt]="launch && launch.mission_name"
+                [title]="launch && launch.mission_name" /></li>
+        <li class="mb-2"><a href="#" class="bold">{{ launch && launch.mission_name}}
+                #{{ launch && launch.flight_number}}</a></li>
+        <li><span class="bold">Mission Ids:</span>
+            <ul *ngFor="let id of launch && launch.mission_id">
+                <li>{{id}}</li>
+            </ul>
+        </li>
+        <li><span class="bold">Launch Year:</span> {{launch && launch.launch_year}}</li>
+        <li><span class="bold">Successful Launch:</span> {{launch && launch.launch_success}}</li>
+        <li><span class="bold">Successful Landing:</span>
+            {{launch && launch.rocket.first_stage.cores[0].land_success}}</li>
+    </ul>
+</div>
